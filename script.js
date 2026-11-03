@@ -62,8 +62,11 @@ document.getElementById('listaSacola').addEventListener('click', function (event
   if (acao === 'aumentar') {
     item.qtd++;
   } else if (acao === 'diminuir') {
-    if (item.qtd > 0) {
-      item.qtd--;
+    item.qtd--;
+    if (item.qtd < 1) {
+      sacola = sacola.filter(function (produto) {
+        return String(produto.id) !== id;
+      });
     }
   } else if (acao === 'remover') {
     sacola = sacola.filter(function (produto) {
