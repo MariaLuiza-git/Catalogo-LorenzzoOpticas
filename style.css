@@ -143,25 +143,24 @@ button {
     gap: 24px 14px;
 }
 
-.card {
+.produto-card {
     display: flex;
     flex-direction: column;
 }
 
 .card-foto {
-    aspect-ratio: 4 / 5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px;
-    margin-bottom: 14px;
-    border-radius: 16px;
+   aspect-ratio: 4 / 5;
+   overflow: hidden;
+   margin-bottom: 14px;
+   border-radius: 16px;
+   background: var(--fundo-frasco);
 }
 
 .card-foto img {
-    max-height: 100%;
-    object-fit: contain;
-    border-radius: 12px;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
 }
 
 .card-nome {
